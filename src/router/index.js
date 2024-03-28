@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Dashboard from '@/views/dashboard/Dashboard.vue'
+import MyAccount from '@/views/dashboard/MyAccount.vue'
 import LogIn from '@/views/LogIn.vue'
 import SignUp from '@/views/SignUp.vue'
 
@@ -40,6 +41,14 @@ const routes = [
       requireLogin: true
     }
   },  
+  {
+    path: '/dashboard/my-account',
+    name: 'MyAccount',
+    component: MyAccount,
+    meta: {
+      requireLogin: true
+    }
+  }, 
 ]
 
 const router = createRouter({
