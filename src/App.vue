@@ -2,9 +2,8 @@
 
 <template>
   <div id="wrapper">
-      
     <nav class="navbar is-light">
-        
+      
       <div class="navbar-brand">
           <router-link to="/" class="navbar-item"><strong>SupremeEng</strong></router-link>
       </div>
@@ -13,6 +12,7 @@
           <div class="navbar-end">
               <template v-if="$store.state.isAuthenticated">
                 <router-link to="/dashboard" class="navbar-item">Dashboard</router-link>
+                <router-link to="/dashboard/clients" class="navbar-item">Clients</router-link>
 
                 <div class="navbar-item">
                     <div class="buttons">
@@ -43,7 +43,8 @@
 
 
     <footer class="footer">
-        <p class="has-text-centered">Copyright (c) 2024 Inc</p>
+        <p class="has-text-centered"><strong>Copyright</strong> (c) 2024 Inc</p>
+        <p class="has-text-centered"> Marfley Technologies.</p>
     </footer>
   </div>
 </template>
@@ -73,5 +74,8 @@ import axios from 'axios';
 
 
 <style lang="scss">
-@import '../node_modules/bulma';
+
+/* @import '../node_modules/bulma'; */
+@import './../node_modules/bulma/css/bulma.css';
+
 </style>
